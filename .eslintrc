@@ -1,0 +1,29 @@
+{
+  "ecmaFeatures": {
+    "unicodeCodePointEscapes": true,
+    "templateStrings": true,
+    "modules": true,
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "amd": true
+  },
+  "rules": {
+    "quotes": [1, "single"],
+    "spaced-comment": 0,
+    "vars-on-top": 0,
+    "no-var": 1,
+    "comma-dangle": 0,
+    "func-names": 0,
+    "react/prop-types": 0,
+    "space-before-blocks": 0,
+    "id-length": 0,
+    "no-unused-vars": 1,
+    "no-trailing-spaces": 1
+  },
+  "globals": {
+    "module": true
+  }
+}
