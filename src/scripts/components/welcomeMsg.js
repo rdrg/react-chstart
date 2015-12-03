@@ -1,13 +1,11 @@
 import React from 'react';
-import $ from 'jquery';
-
 require('./welcomeMsg.scss');
-var reactLogo = require('../../images/react-logo.svg'); //Yeah, require Images!!!
+const reactLogo = require('../../images/react-logo.svg'); //Yeah, require Images!!!
 
-var WelcomeMsg = React.createClass({
+export default class WelcomeMsg extends React.Component {
 
-  render: function() {
-    var features = [];
+  render() {
+    let features = [];
     this.props.features.forEach(function(feature){
       features.push(<li key={feature.name}><a href={feature.url}>{feature.name}</a></li>);
     });
@@ -15,7 +13,7 @@ var WelcomeMsg = React.createClass({
       <div className="main">
         <div className="welcomeMsg">
           <p>
-          Holadsldskld
+          React dev environment
           </p>
           <img width="50px" height="50px" src={reactLogo}/>
         </div>
@@ -26,6 +24,4 @@ var WelcomeMsg = React.createClass({
       </div>
     );
   }
-});
-
-export default WelcomeMsg;
+}

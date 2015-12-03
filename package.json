@@ -1,11 +1,11 @@
 {
-  "name": "reactProjectTemplate",
-  "version": "0.1.0",
+  "name": "easy-insights",
+  "version": "0.0.1",
   "description": "Project template that sets up a fully functioning react.js application with webpack.",
   "main": "assets/js/bundle.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mvilrokx/react-starter-template.git"
+    "url": "https://github.com/rdrg/react-chstart.git"
   },
   "keywords": [
     "template",
@@ -17,31 +17,50 @@
   ],
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
-    "babel-core": "^5.8.25",
+    "babel-core": "^6.2.1",
     "babel-eslint": "^4.1.4",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.19.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.1.18",
+    "babel-plugin-transform-decorators-legacy": "^1.0.0",
+    "babel-polyfill": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "brfs": "^1.4.1",
+    "css-loader": "^0.22.0",
     "csswring": "^4.0.0",
-    "eslint": "^1.6.0",
-    "eslint-config-airbnb": "^0.1.0",
+    "eslint": "^1.9.0",
+    "eslint-config-airbnb": "^1.0.0",
     "eslint-friendly-formatter": "^1.2.2",
-    "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^3.7.1",
-    "file-loader": "^0.8.1",
-    "html-webpack-plugin": "^2.0.3",
-    "image-webpack-loader": "^1.6.1",
-    "jquery": "^3.0.0-alpha1",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.8.0",
+    "exports-loader": "^0.6.2",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.2",
+    "image-webpack-loader": "^1.6.2",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.3",
     "node-http-proxy": "^0.2.3",
     "node-sass": "^3.3.3",
     "postcss-loader": "^0.6.0",
-    "react": "^0.14.0-rc1",
-    "react-dom": "^0.14.0-rc1",
     "react-hot-loader": "^2.0.0-alpha-4",
-    "sass-loader": "^3.0.0",
-    "style-loader": "^0.12.4",
-    "url-loader": "^0.5.5",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+    "sass-loader": "^3.1.1",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.0",
+    "transform-loader": "^0.2.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "axios": "^0.7.0",
+    "babel-polyfill": "^6.2.0",
+    "babel-runtime": "^6.2.0",
+    "classnames": "^2.2.0",
+    "es6-promise": "^3.0.2",
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack -p --progress --colors --config webpack.production.config.js",
@@ -49,10 +68,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./dist"
   },
-  "author": "Mark Vilrokx <mvilrokx@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mvilrokx/react-starter-template/issues"
-  },
-  "homepage": "https://github.com/mvilrokx/react-starter-template"
+  "author": "@rdrg",
+  "license": "mit"
 }

@@ -1,10 +1,11 @@
-Features: es6 with babel, reactjs, hot reload, webpack, scss
+# Easy insights!
 
-# Quick Start
+runs on es6/7 with babel, reactjs, hot reload, webpack, scss
+
+###Quick Start
 ## Development
 
-1. Download this repository and unzip it.
-2. Go to the folder you unzipped the project to and get all the npm dependencies:
+1. Go to root folder of easy-insights and:
 
         $ npm install
 
@@ -18,13 +19,14 @@ Features: es6 with babel, reactjs, hot reload, webpack, scss
 
 Start making changes to the JS and SCSS files and see them magically update in your browser (on file save)
 
-
 ## Production
+1. Check webpack.production.config.js and change your target files.
 
-1. Build the application:
+2. Build the application:
 
         $ npm run build
-2. Copy the dist folder to your PROD server
+  
+3. Copy the dist folder to your PROD server
 
 
 ## Connection to API / Proxy to outside server

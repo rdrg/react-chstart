@@ -8,8 +8,8 @@ var fs                = require('fs');
 var config = {
   entry: './src/scripts/app.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].[hash].js'
+    path: path.resolve(__dirname, '../../../war/chs/easyinsights'),
+    filename: '[name].js'
   },
   module: {
     preLoaders: [{
@@ -20,13 +20,16 @@ var config = {
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel'
+      loader: 'babel?presets[]=es2015&presets[]=react&presets[]=stage-0&plugins[]=transform-decorators-legacy'
     }, {
       test: /\.scss$/,
       loader: 'style!css!postcss!sass'
     }, {
-      test: /\.woff$|\.ttf$|\.wav$|\.mp3$/,
+      test: /\.woff$|\.ttf$|\.wav$|\.mp3$|\.eot$/,
       loader: 'file'
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
     }, {
       test: /\.jpe?g$|\.gif$|\.png$|\.svg$/,
       loaders: [
@@ -37,9 +40,14 @@ var config = {
   },
   postcss: [autoprefixer, csswring],
   plugins: [
+    new webpack.ProvidePlugin({
+      'Promise': 'exports?global.Promise!es6-promise'
+    }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: 'body' // Inject all scripts into the body
+      template: './src/index.ftl',
+      //inject: 'body' // Inject all scripts into the body
+      inject : false,
+      filename: '../../../war/WEB-INF/views/easyinsights/index.ftl'
     }),
     // removes a lot of debugging code in React
     new webpack.DefinePlugin({
@@ -55,7 +63,8 @@ var config = {
         warnings: false
       }
     })
-  ]
+  ],
+  bail: true
 };
 
 module.exports = config;
