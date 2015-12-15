@@ -37,7 +37,6 @@ var config = {
       loaders: [
         'react-hot',
         'babel?cacheDirectory=true&presets[]=es2015&presets[]=react&presets[]=stage-0&plugins[]=transform-decorators-legacy'
-        // add 'eslint' if you want
       ],
       exclude: /node_modules/
     },{
