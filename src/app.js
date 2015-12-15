@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import WelcomeMsg from './components/welcomeMsg';
 
-require('../styles/base.scss'); //Yeah, require CSS!!!
+require('./scss/base.scss'); //Yeah, require CSS!!!
 
 var features = [
   {name: 'React JSX Transformer with harmony support', url: 'https://www.npmjs.com/package/react-tools'},

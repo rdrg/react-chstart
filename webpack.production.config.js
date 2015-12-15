@@ -6,7 +6,7 @@ var path              = require('path');
 var fs                = require('fs');
 
 var config = {
-  entry: './src/scripts/app.js',
+  entry: ['babel-polyfill', './src/app.js'],
   output: {
     path: path.resolve(__dirname, '../../../war/chs/easyinsights'),
     filename: '[name].js'
@@ -44,10 +44,10 @@ var config = {
       'Promise': 'exports?global.Promise!es6-promise'
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.ftl',
+      template: './src/index.ftl', // change this
       //inject: 'body' // Inject all scripts into the body
       inject : false,
-      filename: '../../../war/WEB-INF/views/easyinsights/index.ftl'
+      filename: '../../../war/WEB-INF/views/easyinsights/index.ftl' // change this
     }),
     // removes a lot of debugging code in React
     new webpack.DefinePlugin({

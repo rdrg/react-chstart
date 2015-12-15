@@ -1,6 +1,6 @@
 import React from 'react';
 require('./welcomeMsg.scss');
-const reactLogo = require('../../images/react-logo.svg'); //Yeah, require Images!!!
+const reactLogo = require('./react-logo.svg'); //Yeah, require Images!!!
 
 export default class WelcomeMsg extends React.Component {
 

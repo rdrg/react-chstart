@@ -7,6 +7,7 @@ var fs                = require('fs');
 
 var config = {
   devServer: {
+      historyApiFallback: true,
       proxy: {
           '/ch/*': {
               target: 'http://54.175.165.253:8080',
@@ -20,7 +21,7 @@ var config = {
           },
       },
   },
-  entry: ['babel-polyfill', 'webpack/hot/dev-server', './src/scripts/app.js'],
+  entry: ['babel-polyfill', 'webpack/hot/dev-server', './src/app.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].[hash].js',
@@ -33,7 +34,11 @@ var config = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot', 'babel?cacheDirectory=true&presets[]=es2015&presets[]=react&presets[]=stage-0&plugins[]=transform-decorators-legacy'],
+      loaders: [
+        'react-hot',
+        'babel?cacheDirectory=true&presets[]=es2015&presets[]=react&presets[]=stage-0&plugins[]=transform-decorators-legacy'
+        // add 'eslint' if you want
+      ],
       exclude: /node_modules/
     },{
       test: /\.scss$/,
